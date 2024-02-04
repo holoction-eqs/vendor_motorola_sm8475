@@ -22,7 +22,7 @@
             "enc_cvp_enable": true,
             // encoder csc enable
             "enc_csc_enable": false,
-            // perf hints support for decoder and encoder
+            // perf hints support for decoder
             "perf_control_enable": true,
             // this enables pipeline code for querying capabilities and creating codecs
             "pipelining": true,
@@ -33,6 +33,8 @@
             "enc_vpss_flip": true,
             // this enables RGB conversion with image convertor
             "rgb_image_converter": true,
+            // perf controller support for decoder and encoder
+            "perf_control_enable": true,
             // this will enable the graphics pipeline for
             // CSC and converting images to other format and
             // Rotating the frame etc
@@ -56,8 +58,8 @@
             //  0x3: 8 bit: linear format. 10 bit: linear format
             "dec_linear_color_format": 0,
             // maximum MB/sec for default single non-ref b-frame enablement case
-            // 3840x2160@60fps
-            "enc_single_nonref_b_max_mbs_per_sec": 1944000,
+            // 3840x2160@30fps
+            "enc_single_nonref_b_max_mbs_per_sec": 972000,
             // maximum MB/frame for default adaptive b-frame enablement case
             // 3840x2160/256
             "enc_single_nonref_b_max_mbs_per_frame": 32400,
@@ -120,9 +122,13 @@
             //    Please DON'T change these values, if you don't know what you are doing.
             // These are the Video HAL capabilities. Video HAL may not function properly with wrong values.
             // below are various capability used
-            "num_vpp_pipes": 4,
+            "num_vpp_pipes": 2,
             // video driver version capability used for skype MediaCodec
-            "vt_driver_version": 534123018,
+            // Hex Value : 0xPPPPYYMM
+            //     PPPP [2 Bytes] - Product ID
+            //     YY   [1 Byte ] - Year (last two digits of year {00..99})
+            //     MM   [1 Byte ] - Month (01..12)
+            "vt_driver_version": 553784585,
             // maximum LTR cont for encoder
             "ltr_max_count": 2,
             // Encoder preprocessing: maximum encoder downscalar factor possible in width or height or both direction
