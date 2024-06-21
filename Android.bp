@@ -174,14 +174,11 @@ cc_prebuilt_library_shared {
 		none: true,
 	},
 	target: {
-		android_arm: {
-			srcs: ["proprietary/vendor/lib/vendor.qti.hardware.AGMIPC@1.0-impl.so"],
-		},
 		android_arm64: {
 			srcs: ["proprietary/vendor/lib64/vendor.qti.hardware.AGMIPC@1.0-impl.so"],
 		},
 	},
-	compile_multilib: "both",
+	compile_multilib: "64",
 	check_elf_files: false,
 	prefer: true,
 	soc_specific: true,
@@ -308,131 +305,6 @@ android_app_import {
 		enabled: false,
 	},
 	privileged: true,
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "tcmclient",
-	owner: "motorola",
-	jars: ["proprietary/system/framework/tcmclient.jar"],
-}
-
-dex_import {
-	name: "uimgbalibrary",
-	owner: "motorola",
-	jars: ["proprietary/product/framework/uimgbalibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "uimgbamanagerlibrary",
-	owner: "motorola",
-	jars: ["proprietary/product/framework/uimgbamanagerlibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "uimservicelibrary",
-	owner: "motorola",
-	jars: ["proprietary/product/framework/uimservicelibrary.jar"],
-	product_specific: true,
-}
-
-dex_import {
-	name: "com.qti.dpmframework",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/com.qti.dpmframework.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "dpmapi",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/dpmapi.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "qcrilhook",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/qcrilhook.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.hardware.alarm-V1.0-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.connection-V1.0-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.connection-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.factory-V2.0-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.factory-V2.1-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.factory-V2.2-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.factory-V2.2-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcssip-V1.0-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcssip-V1.1-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcssip-V1.2-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcssip-V1.2-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsuce-V1.0-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.0-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsuce-V1.1-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.1-java.jar"],
-	system_ext_specific: true,
-}
-
-dex_import {
-	name: "vendor.qti.ims.rcsuce-V1.2-java",
-	owner: "motorola",
-	jars: ["proprietary/system_ext/framework/vendor.qti.ims.rcsuce-V1.2-java.jar"],
 	system_ext_specific: true,
 }
 
