@@ -33,6 +33,8 @@
             "enc_vpss_flip": true,
             // this enables RGB conversion with image convertor
             "rgb_image_converter": true,
+            // this will enable carveout memory for secure encoder bitstream
+            "hw_protected_carveout": false,
             // this will enable the graphics pipeline for
             // CSC and converting images to other format and
             // Rotating the frame etc
@@ -50,10 +52,10 @@
             // control to force enable linear color format for decoder
             // if this is enable, then decoder will produce linear color format output.
             // it is bitmask:
-            //  0x0: no override,
-            //  0x1: enable 8 bit: linear format. 10 bit: compressed format
-            //  0x2: 8 bit: compressed format. 10 bit: linear format
-            //  0x3: 8 bit: linear format. 10 bit: linear format
+            //  0: no override,
+            //  1: enable 8 bit: linear format. 10 bit: compressed format
+            //  2: 8 bit: compressed format. 10 bit: linear format
+            //  3: 8 bit: linear format. 10 bit: linear format
             "dec_linear_color_format": 0,
             // maximum MB/sec for default single non-ref b-frame enablement case
             // 3840x2160@60fps
